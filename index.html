@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="dbGui">
+<head>
+	<link rel="stylesheet" type="text/css" href="lib/bootstrap.min.css" />
+    <script type="text/javascript" src="lib/angular.min.js"></script>
+    <script type="text/javascript" src="app/app.js"></script>
+</head>
+<body ng-controller="DbController as db">
+    <!--  App Header  -->
+    <header>
+      <h1 class="text-center">TLK Members</h1>
+      <h2 class="text-center">– a database –</h2>
+    </header>
+
+    <!--  Members Container  -->
+    <div class="list-group">
+      <!--  Member Container  -->
+      <div class="list-group-item" ng-repeat="person in db.persons">
+        <h3>{{person.address}} - {{person.city}}</h3>
+
+      </div>
+    </div>
+</body>
+</html>
